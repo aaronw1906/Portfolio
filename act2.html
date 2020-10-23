@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/act2.css">
+  <title>Act. 2</title>
+  <link rel="icon" href="img/cityicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <div class = "background">
+  </div>
+  
+  <div class = "click">
+    <h1>Act. 2</h1>
+  </div>
+  
+  <div class = "container">
+    <div id = "exit">
+      [x]
+    </div>
+    <p id = "title">Act. 2</p> 
+    <p>変わっていく　世界の中で</p>
+    <p>変わらない</p>
+    <p><span style="padding-left: 30px;">私の世界</span></p> <br>
+    <p>夢　輝いた夜がきて</p> 
+    <p>何もかも　変わると信じた</p>
+    <p>でも、</p>
+    <p>何も変わりはしない</p>
+    <p>それが</p>
+    <p><span style="padding-left: 30px;">私の世界よ</span></p> <br>
+    <p>鳥籠みたいな部屋と</p>
+    <p>生き抜くための日々</p>
+    <p>もう届けない</p>
+    <p>あの日見てた夢</p>
+    <p>夜に隠した</p>
+    <p><span style="padding-left: 30px;">願いや過去の日も</span></p> <br>
+    <p>私を呼んでる気がして</p> <br>
+    <p>変わっていく　世界の中で</p>
+    <p>変わらない</p>
+    <p><span style="padding-left: 30px;">私の世界</span></p> <br>
+    <p>夢をみたの　夜の街に光輝く</p>
+    <p>この想い　隠す</p>
+  </div>
+  
+  <div class="next">
+    <h1><a href="act3.html">Act. 3 ></a></h1>
+  </div>
+
+  <div class="prev">
+    <h1><a href="act1.html"> &lt; Act. 1 </a></h1>
+  </div>
+
+  <script>
+  $('.click').click(function(){
+  $('.click').fadeOut(500);
+  $('.next').fadeOut(500);
+  $('.prev').fadeOut(500);
+  $('.container').fadeIn(500);
+  $('.background').css({"-webkit-filter":"blur(6px)"});
+});
+
+$('#exit').click(function(){
+  $('.container').fadeOut(500);
+  $('.click').fadeIn(500);
+  $('.next').fadeIn(500);
+  $('.prev').fadeIn(500);
+  $('.background').css({"-webkit-filter":"blur(0)"});
+});
+  </script> 
+
+</body>
+</html>

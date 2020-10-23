@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interstellar</title>
+  <link rel="icon" href="img/interstellaricon.png">
+
+  <link rel="stylesheet" href="css/interstellar.css">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <div class="section" id="first">
+    <h1>Do Not Go Gentle<br/> Into That Good Night</h1>
+  </div>
+  <div class="section">
+    <pre>
+    Do not go gentle into that good night,
+  Old age should burn and rave at close of day;
+    Rage, rage against the dying of the light.
+    </pre>
+  </div>
+  <div class="section">
+    <pre>
+    Though wise men at their end know dark is right,
+  Because their words had forked no lightning they
+    Do not go gentle into that good night.
+    </pre>
+  </div>
+  <div class="section">
+    <pre>
+    Good men, the last wave by, crying how bright
+  Their frail deeds might have danced in a green bay,
+    Rage, rage against the dying of the light.
+    </pre>
+  </div>
+  <div class="section">
+    <pre>
+    Wild men who caught and sang the sun in flight,
+  And learn, too late, they grieved it on its way,
+    Do not go gentle into that good night.
+    </pre>
+  </div>
+  <div class="section">
+    <pre>
+    Grave men, near death, who see with blinding sight
+  Blind eyes could blaze like meteors and be gay,
+    Rage, rage against the dying of the light.
+    </pre>
+  </div>
+  <div class="section">
+    <pre>
+      And you, my father, there on the sad height,
+  Curse, bless, me now with your fierce tears, I pray.
+  Do not go gentle into that good night.
+  Rage, rage against the dying of the light.
+    </pre>
+  </div>
+  <div class="section" id="last">
+    <img src="img/interstellar2.jpg" id="pic"/>
+    
+    <p>
+      Interstellar
+      <br/> 
+      (2014)
+      <br/><br/>
+      <span>a science fiction film<br/><br>directed by <br> Christopher Nolan</span></p>
+  </div>
+  </div>
+
+  <div class="prev">
+    <h1><a href="index.html"> &lt; Home </a></h1>
+  </div>
+  
+  <script>
+    
+    $(document).ready(function() {
+  var pos = $(window).scrollTop;
+  var target = .96 * ($(document).height() - $(window).height());
+  
+  $(window).scroll(function(){
+    if ($(window).scrollTop() >= .96 * ($(document).height() - $(window).height())) {
+      var p = document.getElementById('pic');
+       p.style.opacity = "1";
+       p.style.transition = "opacity 15s ease .5s";
+    }
+    var tot = $(document).height() - $(window).height();
+  	var b = document.body;
+  	b.style.backgroundColor = "rgba(0,0,0,"+((window.pageYOffset/tot)+.2)+")";
+    
+	});  
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+  padding-top: 40px;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  background-color: rgb(200, 200, 200);
+}
+
+#target {
+  font-size: 48px;
+  letter-spacing: 0.1em;
+}
+
+h1 {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  text-decoration: underline;
+}
+
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#result1 {
+  /* position: absolute; */
+  width: 100px;
+  height: 60px;
+  background: rgb(110, 110, 110);
+  padding: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 300px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.4s;
+  line-height: 60px;
+}
+
+#result1.hidden {   
+  transform: translateY(-500px);
+}
+
+#result1 > p {
+  font-size: 26px;
+}
+
+#result1 > a {
+  display: block;
+  text-decoration: none;
+}
+
+
+.prev {
+  background-color: transparent;
+  /* border: 3px solid white; */
+  width: 150px;
+  height: 50px;
+  opacity: 1;
+  /* position: relative; */
+  position: absolute;
+  bottom: 15%;
+  left: 45%;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.prev h1{
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0px;
+  text-decoration: none;
+}
+
+.prev:hover{
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all .5s linear;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/act1.css">
+  <title>Act. 1</title>
+  <link rel="icon" href="img/cityicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <div class = "background">
+  </div>
+  
+  <div class = "click">
+    <h1>Act. 1</h1>
+  </div>
+  
+  <div class = "container">
+    <div id = "exit">
+      [x]
+    </div>
+    <p id = "title">Act. 1</p> 
+    <p>変わっていく　世界の中で</p>
+    <p>変わらない</p>
+    <p><span style="padding-left: 30px;">私の世界</span></p> <br>
+    <p>新しい朝がきた</p> 
+    <p>何もかも　変わる気がして</p>
+    <p>目を覚ます</p>
+    <p>いつも同じの</p>
+    <p><span style="padding-left: 30px;">「勉強と仕事」</span></p>
+    <p>退屈な暮らし</p> <br>
+    <p>「夢ってなんだろう？」</p>
+    <p>知りたいの！</p>
+    <p>外の世界を</p>
+    <p>諦められない</p>
+    <p>馬鹿にされても</p>
+    <p>誰が無理って決めたの？</p> <br>
+    <p>今日も</p>
+    <p><span style="padding-left: 30px;">夕日は</span></p>
+    <p>私をしらんぷり</p> <br>
+    <p>変わっていく　世界の中で</p>
+    <p>変わらない</p>
+    <p><span style="padding-left: 30px;">私の世界</span></p> <br>
+    <p>夢をみたの　夜の街に光輝く</p>
+    <p>この想い　隠せない</p>
+  </div>
+  
+  <div class="next">
+    <h1><a href="act2.html">Act. 2 ></a></h1>
+  </div>
+
+  <div class="prev">
+    <h1><a href="index.html"> &lt; Home </a></h1>
+  </div>
+
+  <script>
+  $('.click').click(function(){
+  $('.click').fadeOut(500);
+  $('.next').fadeOut(500);
+  $('.prev').fadeOut(500);
+  $('.container').fadeIn(500);
+  $('.background').css({"-webkit-filter":"blur(6px)"});
+});
+
+$('#exit').click(function(){
+  $('.container').fadeOut(500);
+  $('.click').fadeIn(500);
+  $('.next').fadeIn(500);
+  $('.prev').fadeIn(500);
+  $('.background').css({"-webkit-filter":"blur(0)"});
+});
+  </script> 
+
+</body>
+</html>

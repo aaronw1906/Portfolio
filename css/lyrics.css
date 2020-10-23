@@ -1,0 +1,211 @@
+body {
+  height: 100%;
+  width: 100%;
+  /* background: linear-gradient(to bottom, #243B55, #141E30); */
+  background:linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0,.5)),url("../img/taybg.jpeg");
+  position: relative;
+  overflow-x: hidden ;
+  z-index: 0;
+  color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.background-lyrics {
+  color: #fff;
+  position: absolute;
+  font-family: 'Gloria Hallelujah', serif;
+  font-size: 80px;
+  width: 130%;
+  z-index: -1;
+  top: -10%;
+  left: -10%;
+  transform: rotate(-8deg);
+  opacity: 0.07;
+}
+
+.container-tile .content {
+  margin: 0 auto 5em;
+  min-height: 100vh;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  min-width: 100%;
+  flex: 1;
+  font: 60px 'Abril Fatface';
+  margin: 40px 0 15px;
+}
+
+.tile {
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform .1s;
+  position: relative;
+  margin: 5px;
+  cursor: pointer;
+  background-image: url('../img/tay1000.png');
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.tile:hover {
+  box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+  opacity: 0.9;
+}
+
+.tile:nth-child(2) {
+   background-position: -250px 0;
+}
+.tile:nth-child(3) {
+   background-position: -500px 0;
+}
+.tile:nth-child(4) {
+   background-position: 0 -250px;
+}
+.tile:nth-child(5) {
+   background-position: -250px -250px;
+}
+.tile:nth-child(6) {
+   background-position: -500px -250px;
+}
+.tile:nth-child(7) {
+   background-position: 0 -500px;
+}
+.tile:nth-child(8) {
+   background-position: -250px -500px;
+}
+.tile:nth-child(9) {
+   background-position: -500px -500px;
+}
+
+.tile .title {
+  font-family: 'IM Fell English';
+  font-style: italic;
+  font-size: 30px;
+  letter-spacing: .5px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 35px;
+  line-height:1.1;
+}
+
+.tile .lines {
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+	border: 3px solid #fff;;
+	transform: scale3d(0.9,0.9,1);
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.tile:hover .lines {
+	opacity: 1;
+	transform: scale3d(1,1,1);
+}
+
+.container-master {
+  position: relative;
+}
+
+.lyrics-title {
+	font-family: 'Abril Fatface', serif;
+  font-size: 45px;
+  letter-spacing: 1px;
+  position: relative;
+  text-align: right;
+  margin: 0 0 25px;
+  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  top: -250px;
+}
+
+#mask1,#mask2,#mask3,#mask4,#mask5,#mask6,#mask7,#mask8,#mask9 {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#modal1,#modal2,#modal3,#modal4,#modal5,#modal6,#modal7,#modal8,#modal9 {
+  background: grey;
+  opacity: 0.9;
+  width: 50%;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform 1s;
+  z-index: 2;
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+}
+
+#mask1.hidden1,#mask2.hidden2,#mask3.hidden3,#mask4.hidden4,#mask5.hidden5,#mask6.hidden6,#mask7.hidden7,#mask8.hidden8,#mask9.hidden9 {
+  display: none;
+}
+
+#modal1.hidden1,#modal2.hidden2,#modal3.hidden3,#modal4.hidden4,#modal5.hidden5,#modal6.hidden6,#modal7.hidden7,#modal8.hidden8,#modal9.hidden9 {
+  transform: translate(0, -5000px);
+}
+
+ul {
+  color: white;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 2px;
+}
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.prev {
+  background-color: transparent;
+  opacity: 0.5;
+  border: 2px solid white;
+  width: 80px;
+  height: 30px;
+  position: relative;
+  bottom: 15%;
+  left: 45%;
+  font-family: 'IM Fell English';
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+}
+
+.prev a{
+  color: #fff;
+  line-height: 30px;
+  padding: 0px;
+}
+
+.prev:hover{
+  opacity: 1;
+  cursor: pointer;
+  transition: all .5s linear;
+}
